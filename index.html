@@ -21,7 +21,7 @@
 
     <!-- Your code -->
     <link rel="stylesheet" href="style.css" />
-    <script defer src="barchart.js"></script>
+    <script src="main.js" defer type="module"></script>
 
   </head>
   <body>
@@ -32,13 +32,14 @@
 
       <label for="group-by">Group By</label>
         <select id="group-by">
-        <option value="stores">Regions</option>
-        <option value="revenue">Categories</option>
+        <option value="regions">Regions</option>
+        <option value="categories">Categories</option>
         <option value="investors">Investors</option>
         <option value="countries">Countries</option>
         </select>
 
-      <div class="chart">
+      <div class="chart-container1">
+          <div class='bars'></div>
     </div>
         
         
