@@ -56,8 +56,10 @@ export default function BarChart(container){
             ydata=d[0].country;
         }
 
+        //Sort count to display top 20?
+
         xScale.domain(data.map(d=>d[0].name))               //
-        yScale.domain([0,d3.max(data,d=>d[0][type])])        //
+        yScale.domain([0,d3.max(data,d=>d[0][type])])        //should be count right?
 
 
         const bar = svg.selectAll('.bars')
