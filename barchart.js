@@ -56,6 +56,17 @@ export default function BarChart(container){
             ydata=d[0].country;
         }
 
+        //something like this for the frequency of each category
+        var counts = {};
+        ydata.forEach(function(d) {         //ydata but not quite sure how to access the data
+        if (!counts[d]) {
+            counts[d] = 0;
+        }
+        counts[d]++;
+        });
+
+        var data1 = d3.entries(counts); //returns key:value i think this would be the x and y
+
         //Sort count to display top 20?
 
         xScale.domain(data.map(d=>d[0].name))               //
