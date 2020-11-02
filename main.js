@@ -1,4 +1,4 @@
-import BarChart from './barchart.js';
+import BarChart from './barchart2.js';
 
 
 let type = document.querySelector('#group-by');
@@ -21,3 +21,4 @@ function loadData(type){
         barchart.update(data,type);
     })
 }
+//loadData(type);
