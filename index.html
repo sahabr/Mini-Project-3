@@ -20,27 +20,37 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js"></script>
 
     <!-- Your code -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" /> 
     <script src="main.js" defer type="module"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+
 
   </head>
   <body>
     <h1><b>
       Investments Around the World 
   </b></h1>
-    <h2>What are the top regions, categories, investors, and countries by rounds throughout different years?</h2>
+    <h2>What are the top regions, markets, and countries by rounds throughout different years?</h2>
 
       <label for="group-by">Group By</label>
         <select id="group-by">
-        <option value="regions">Regions</option>
-        <option value="categories">Categories</option>
-        <option value="investors">Investors</option>
-        <option value="countries">Countries</option>
+          <option value="regions">Regions</option>
+          <option value="market">Market</option>
+          <option value="country">Countries</option>
         </select>
+      <div id='slider'>Year: </div><p id='value'></p>
 
       <div class="chart-container1">
-          <div class='bars'></div>
     </div>
+    <div class="tooltip">
+      <ol>
+        <ul>Category: <span class="type"></span><div id="type"></div></ul>
+        <ul>Name: <span class="name"></span><div id='name'></div></ul>
+        <ul>Current Count: <span class="current"></span><div id="current"></div></ul>
+        <ul>10 Years ago: <span class="past"></span><div id="past"></div></ul>
+        <ul>Percent Change: <span class="change"></span><div id="change"></div></ul>
+      </ol> 
+     </div>
         
         
 
